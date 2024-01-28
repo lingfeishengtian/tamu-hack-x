@@ -1,0 +1,36 @@
+[
+    {
+        "id": "restaurant_001",
+        "name": "Nancy’s Hustle",
+        "rating": "4.4",
+        "review_count": "967 reviews",
+        "categories": ["New American", "Tapas/Small Plates", "Modern European"],
+        "price_range": "$$$",
+        "location": "EaDo",
+        "status": "Closed until 5:00 PM",
+        "review_snippet": "NO question as to why Nancy's Hustle is SO highly rated and talked about. No question as to why the reservations are so hard to come by! Nancy's Hustle is a…"
+    },
+    {
+        "id": "restaurant_002",
+        "name": "Traveler’s Table",
+        "rating": "4.4 stars",
+        "review_count": "1.8k reviews",
+        "categories": ["Tapas/Small Plates", "New American"],
+        "price_range": "$$ (Moderate)",
+        "location": "Montrose, Houston, TX",
+        "status": "Closed, reopens at 5:00 PM",
+        "additional_details": "The business features an image slideshow that can be navigated with previous and next buttons.",
+        "review_snippet": "First time at Travelers Table, and it was fantastic! Great food, impeccable service, and a wonderful atmosphere. Loved the attentive staff ensuring everyone…"
+    },
+    {
+        "id": "restaurant_003",
+        "name": "Bludorn",
+        "rating": "4.3 stars",
+        "review_count": "530 reviews",
+        "category": "New American",
+        "price_range": "$$$$",
+        "location": "Fourth Ward, Houston, TX",
+        "status": "Closed until 5:00 PM",
+        "review": "I've been to Blue Navy (sister restaurant) and loved it, so I wanted to try Bludorn out. They have very similar vibes. Service was amazing. Food was…"
+    }
+]
