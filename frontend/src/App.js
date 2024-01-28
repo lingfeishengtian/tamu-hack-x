@@ -9,9 +9,9 @@ import CategoryDetails from "./components/CategoryDetails";
 import { sendHTMLRequest } from "./AI_API";
 
 function App() {
-  useEffect(() => {
-    sendHTMLRequest();
-  }, []);
+  // useEffect(() => {
+  //   sendHTMLRequest();
+  // }, []);
 
   const [selectedCategory, setSelectedCategory] = useState(null);
 

@@ -54,7 +54,7 @@ const CategoryDetails = ({ category, onClose }) => {
       />
       <div style={{display: "flex", marginTop: "50px", alignItems: 'center', flexDirection: 'column'}}>
       {tabs.map((tab, index) => (
-            <div style={{color: 'white', fontFamily: 'secFont'}} key={index}>{tab}</div>
+            <a href={tab} target="_blank" rel="noopener noreferrer" style={{color: 'white', fontFamily: 'secFont'}} key={index}>{tab}</a>
           ))}
       </div>
     </div>
