@@ -66,6 +66,14 @@
   font-family: "mainFont";
 }
 
+#infoBG {
+  width: 25%;
+  height: 89.2%;
+  background-color: var(--color2);
+  position: absolute;
+  top: 80px;
+}
+
 #mainContainer {
   height: calc(100vh - 80px);
   width: 100%;
@@ -75,6 +83,7 @@
   justify-content: space-around; */
   display: flex;
   flex-direction: row;
+  overflow: hidden;
 }
 
 .categoryMenuButtons {
@@ -153,8 +162,29 @@ height: 10%;
   flex: 1;
 }
 
+#indMessage {
+  max-width: 1100px;
+  overflow-wrap: break-word;
+}
+
 #messagesWrap {
   height: 80%;
+}
+
+#hbImg {
+  width: 30px;
+  height: 25px;
+}
+
+#hamburgerWrap {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #inputWrap {
