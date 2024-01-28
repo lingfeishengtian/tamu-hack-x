@@ -1,7 +1,7 @@
 /*global chrome*/
 import { extractElemList, ValidSites, getBestSiteForUrl } from "./html_parser/extract_elem_list";
 
-(async () => {
+export async function getChromeTabs() {
     const tabs = await chrome.tabs.query({});
     let fin = [];
     for (let tab of tabs) {
@@ -10,10 +10,10 @@ import { extractElemList, ValidSites, getBestSiteForUrl } from "./html_parser/ex
           target: { tabId: tab.id },
           func: () => document.documentElement.outerHTML,
         });
-        fin.push(extractElemList(result[0].result, getBestSiteForUrl(tab.url)));
+        fin.push(extractElemList(result[0].result, tab.url));
       } catch (e) {
         console.log(e)
       }
     }
-    console.log(fin)
-  })();
+    return fin;
+  };

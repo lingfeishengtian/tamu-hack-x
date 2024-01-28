@@ -1,6 +1,31 @@
+import { useEffect, useState } from "react";
 import backButton from "../assets/backButton.png";
+import { getCategories } from "../AI_API";
 
-const CategoryDetails = ({ category, onClose , tabs}) => {
+function getCategoryName(category) {
+  switch (category) {
+    case "Airlines":
+      return "flight";
+    case "Housing":
+      return "housing";
+    case "Dining":
+      return "restaurant";
+    case "Activities":
+      return "activity";
+    default:
+      return "flight";
+  }
+}
+
+const CategoryDetails = ({ category, onClose }) => {
+  let [tabs, setTabs] = useState([]);
+  useEffect(() => {
+    getCategories(getCategoryName(category)).then((response) => {
+      setTabs([...new Set(response.ret.map((tab) => tab.link))]);
+    });
+  }
+  , []);
+
   return (
     <div id="infoBG">
       <div

@@ -4,17 +4,14 @@ import "./App.css";
 import Category from "./components/Category";
 import hamburger from "../src/assets/hamburger.png";
 import Chat from "./components/Chat";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CategoryDetails from "./components/CategoryDetails";
+import { sendHTMLRequest } from "./AI_API";
 
 function App() {
-  // chrome.tabs.query({ currentWindow: true, active: true },
-  //   function (tabs) {
-  //   for (let tab of tabs) {
-  //     console.log(tab.url);
-  //   }
-  // }
-  // )
+  useEffect(() => {
+    sendHTMLRequest();
+  }, []);
 
   const [selectedCategory, setSelectedCategory] = useState(null);
 
@@ -73,7 +70,6 @@ function App() {
               <CategoryDetails
                 category={selectedCategory}
                 onClose={handleCategoryDetailsClose}
-                tabs={[]}
               />
             )}
           </div>
