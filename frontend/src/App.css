@@ -1,5 +1,18 @@
 :root {
-  --color1: #636363;
+  --color1: #0064BF;
+  --color2: #005099;
+}
+
+@font-face {
+  font-family: 'mainFont';
+  src: local('Lalezar'), url('../src/assets/Lalezar-Regular.ttf') format('truetype');
+  /* Additional font formats may be specified here for better browser compatibility */
+}
+
+@font-face {
+  font-family: 'secFont';
+  src: local('Lao'), url('../src/assets/Lato-Regular.ttf') format('truetype');
+  /* Additional font formats may be specified here for better browser compatibility */
 }
 
 .App {
@@ -45,4 +58,242 @@
   width: 100%;
   height: 80px;
   background-color: var(--color1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: white;
+  font-family: "mainFont";
 }
+
+#mainContainer {
+  height: calc(100vh - 80px);
+  width: 100%;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around; */
+  display: flex;
+  flex-direction: row;
+}
+
+.categoryMenuButtons {
+  width: 100%;
+  height: 100px;
+  color: white;
+  font-family: "mainFont";
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sideBarWrapper {
+  background-color: var(--color2);
+  width: 25%;
+  height: 100%;
+}
+
+
+
+#left {
+  width: 50%;
+  height: 100%;
+
+}
+
+#box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+#right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#categoryContainer {
+  /* margin-top: 20px; */
+  height: 300px;
+  width: 300px;
+  border-radius: 40px;
+  background-color: var(--color2);
+  overflow: hidden;
+}
+
+#categoryHeader {
+height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+#contentContainer {
+  height: 90%;
+}
+
+#summaryContainer {
+  height: 50%;
+  
+}
+
+#tabListContainer {
+  height: 50%;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+#chatWrapper {
+  height: 100%;
+  flex: 1;
+}
+
+#messagesWrap {
+  height: 80%;
+}
+
+#inputWrap {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#oval {
+  border-radius: 100px;
+  border: 5px solid var(--color1);
+  width: 90%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+#chatMainWrapper {
+  width: 100%;
+  height: 100%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: yellow; */
+  /* padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px; */
+}
+
+#window {
+  width: 620px;
+  height: 620px;
+  background-color: var(--color2);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+#messagesContainer {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+
+}
+
+#messagesContainer::-webkit-scrollbar {
+  width: 0px;  /* Adjust the width of the scrollbar as needed */
+}
+
+#messagesContainer::-webkit-scrollbar-thumb {
+  background-color: #888;  /* Color of the scrollbar thumb */
+  border-radius: 6px;  /* Radius of the scrollbar thumb */
+}
+
+#messagesContainer::-webkit-scrollbar-track {
+  background-color: #f1f1f1;  /* Color of the scrollbar track */
+}
+
+#inputWrapper {
+  width: 620px;
+  height: 100px;
+  bottom: 20px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#inputOval {
+  border-radius: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 50%;
+  width: 85%;
+  border: 5px solid var(--color1);
+  display: flex;
+  
+
+}
+
+#senderText {
+  font-weight: bold;
+}
+
+#messageInput::placeholder {
+  color:rgb(81, 81, 81);
+}
+
+.messageText {
+  font-family: 'secFont';
+  font-size: 16px;
+  overflow-wrap: break-word;
+  max-width: 60%;
+}
+
+#messageWrapper {
+  /* margin-top: 10px;
+  margin-bottom: 10px; */
+  width: 100%;
+  height: 50px;
+  /* background-color: purple; */
+  display: flex;
+  justify-content: center;
+
+
+}
+
+#contentWrapper {
+  /* padding-left: 30px;
+  padding-right: 30px; */
+  /* background-color: brown; */
+  width: 90%;
+  height: 100%;
+
+}
+
+#bubble {
+  padding: 12px;
+  display: inline-block;
+  border-radius: 30px;
+  overflow-wrap: break-word;
+  max-width: 60%; /* Add this line to ensure the bubble respects the max-width of the container */
+  background-color: var(--color1);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bubbleGuideLeft {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#bubbleGuideRight {
+  display: flex;
+  justify-content: flex-end;
+}
+

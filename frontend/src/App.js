@@ -1,11 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Category from "./components/Category";
+import Chat from "./components/Chat";
 
 function App() {
   return (
-    <div id='topBar'>
-      asdfds
-    </div>
+    <>
+      <div id="topBar">Tabventure</div>
+      <div id="mainContainer">
+        <div id="sideBarWrapper">
+          <div className="categoryMenuButtons">Airlines</div>
+          <div className="categoryMenuButtons">Housing</div>
+          <div className="categoryMenuButtons">Dining</div>
+          <div className="categoryMenuButtons">Activities</div>
+          <div className="categoryMenuButtons"></div>
+          <div className="categoryMenuButtons">Bookmarks</div>
+
+        </div>
+        <div id="chatWrapper">
+          <Chat/>
+        </div>
+        {/* <div id="left">
+            <Chat />
+        </div> */}
+        {/* <div id="right">
+          <div id="box">
+            <Category title="Airlines" />
+            <Category title="Housing" />
+            <Category title="Food" />
+            <Category title="Entertainment" />
+          </div>
+        </div> */}
+      </div>
+    </>
   );
 }
 
