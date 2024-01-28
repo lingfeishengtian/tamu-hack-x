@@ -1,4 +1,5 @@
 /*global chrome*/
+import { extractElemList, ValidSites, getBestSiteForUrl } from "./html_parser/extract_elem_list";
 
 (async () => {
     const tabs = await chrome.tabs.query({});

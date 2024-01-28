@@ -2,26 +2,87 @@
 
 import "./App.css";
 import Category from "./components/Category";
+import hamburger from "../src/assets/hamburger.png";
 import Chat from "./components/Chat";
-import { extractElemList, ValidSites, getBestSiteForUrl } from "./html_parser/extract_elem_list";
+import { useState } from "react";
+import CategoryDetails from "./components/CategoryDetails";
 
 function App() {
+  // chrome.tabs.query({ currentWindow: true, active: true },
+  //   function (tabs) {
+  //   for (let tab of tabs) {
+  //     console.log(tab.url);
+  //   }
+  // }
+  // )
+
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+  const [showSideBar, setShowSideBar] = useState(false);
+
+  function handleHamburgerClick() {
+    setShowSideBar(!showSideBar);
+  }
+
+  function handleCategoryClick(category) {
+    setSelectedCategory(category);
+  }
+
+  function handleCategoryDetailsClose() {
+    setSelectedCategory(null);
+  }
+
   return (
     <>
       <div id="topBar">Tabventure</div>
       <div id="mainContainer">
-        <div id="sideBarWrapper">
-          <div className="categoryMenuButtons">Airlines</div>
-          <div className="categoryMenuButtons">Housing</div>
-          <div className="categoryMenuButtons">Dining</div>
-          <div className="categoryMenuButtons">Activities</div>
-          <div className="categoryMenuButtons"></div>
-          <div className="categoryMenuButtons">Bookmarks</div>
+        {showSideBar && (
+          <div id="sideBarWrapper">
+            <div
+              className="categoryMenuButtons"
+              onClick={() => handleCategoryClick("Airlines")}
+            >
+              Airlines
+            </div>
+            <div
+              className="categoryMenuButtons"
+              onClick={() => handleCategoryClick("Housing")}
+            >
+              Housing
+            </div>
+            <div
+              className="categoryMenuButtons"
+              onClick={() => handleCategoryClick("Dining")}
+            >
+              Dining
+            </div>
+            <div
+              className="categoryMenuButtons"
+              onClick={() => handleCategoryClick("Activities")}
+            >
+              Activities
+            </div>
+            <div className="categoryMenuButtons"></div>
+            <div
+              className="categoryMenuButtons"
+              onClick={() => handleCategoryClick("Bookmarks")}
+            >
+              Bookmarks
+            </div>
+            {selectedCategory && (
+              <CategoryDetails
+                category={selectedCategory}
+                onClose={handleCategoryDetailsClose}
+                tabs={[]}
+              />
+            )}
+          </div>
+        )}
 
-        </div>
         <div id="chatWrapper">
           <Chat />
         </div>
+
         {/* <div id="left">
             <Chat />
         </div> */}
@@ -33,6 +94,9 @@ function App() {
             <Category title="Entertainment" />
           </div>
         </div> */}
+      </div>
+      <div id="hamburgerWrap">
+        <img onClick={handleHamburgerClick} id="hbImg" src={hamburger} />
       </div>
     </>
   );
