@@ -1,66 +1,43 @@
 [
     {
-        "id": 1,
-        "name": "Traveler\u2019s Table",
-        "rating": "4.4 stars",
+        "id": 12345,
+        "link": "https://www.aa.com/booking/find-flights",
+        "type": "flight",
+        "name": "American Airlines",
+        "rating": "4.5 stars",
         "price_range": "$$",
+        "price": "$484",
         "categories": [
-            "Tapas/Small Plates",
-            "New American"
+            "Flight",
+            "Travel"
         ],
-        "location": "Montrose",
-        "review_snippet": "\u201cFirst time at Travelers Table, and it was fantastic! Great food, impeccable service, and a wonderful atmosphere. Loved the attentive staff ensuring everyone\u2026\u201d"
+        "location": "DFW to BPT",
+        "review_snippet": "Nonstop flight from DFW to BPT",
+        "start": "9:12 PM",
+        "end": "10:39 PM",
+        "duration": "1h 27m",
+        "accomodations": [
+            "Nonstop"
+        ]
     },
     {
-        "id": 2,
-        "name": "Nancy\u2019s Hustle",
+        "id": 10,
+        "link": "https://www.yelp.com/search?find_desc=Burgers&find_loc=College+Station,+TX",
+        "type": "restaurant",
+        "name": "Steak 48",
         "rating": "4.4 stars",
-        "price_range": "$$$",
+        "price_range": "$$$$",
+        "price": "",
         "categories": [
-            "New American",
-            "Tapas/Small Plates",
-            "Modern European"
-        ],
-        "location": "EaDo",
-        "review_snippet": "NO question as to why Nancy's Hustle is SO highly rated and talked about. No question as to why the reservations are so hard to come by! Nancy's Hustle is a..."
-    },
-    {
-        "id": 3,
-        "name": "Bosscat Kitchen & Libations",
-        "rating": "4.3 stars",
-        "price_range": "$$",
-        "categories": [
-            "New American",
-            "Whiskey Bars",
-            "Breakfast & Brunch"
+            "Steakhouses",
+            "Seafood",
+            "Bars"
         ],
         "location": "Highland Village",
-        "review_snippet": "\u201cFamily graduation dinner with friends and the food was amazing! Love the cozy feeling of the restaurant and service was great. Highly recommended.\u201d"
-    },
-    {
-        "id": 4,
-        "name": "State of Grace",
-        "rating": "4.4",
-        "price_range": "$$$",
-        "categories": [
-            "Southern",
-            "New American",
-            "Seafood"
-        ],
-        "location": "River Oaks",
-        "review_snippet": "We got oysters from the happy hour menu, which runs from open to 6pm on weekdays, despite what the website/google says. They do half off on certain oysters, so..."
-    },
-    {
-        "id": 5,
-        "name": "Oporto Fooding House & Wine",
-        "rating": "4.4 stars",
-        "price_range": "$$",
-        "categories": [
-            "Tapas/Small Plates",
-            "Portuguese",
-            "Wine Bars"
-        ],
-        "location": "Fourth Ward",
-        "review_snippet": "At first glance, Oporto's is a little hard to find, since it's located right between two roads with no parking lot. We went to Oporto's on a weekday for lunch..."
+        "review_snippet": "\u201cOf course the great steak 48, known for their steaks and of course ambience. All the celebrations happen here. My waiting I wish I knew his name was awesome.\u2026\u201d",
+        "start": "",
+        "end": "",
+        "duration": "",
+        "accomodations": []
     }
 ]
