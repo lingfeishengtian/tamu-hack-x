@@ -24,7 +24,9 @@ async def send_html():
     data = request.json
     html_queries = data.get('data').get('html')
 
-    html_queries = html_queries[:4]
+    html_queries = html_queries[:2]
+
+    print(html_queries)
     
     tasks = [preprocess_model.parse_html(query) for query in html_queries]
     responses = await asyncio.gather(*tasks)
@@ -54,10 +56,28 @@ async def send_query():
     query = data.get('data').get('query')
     
     response = query_model.ask(query)
-    print(response)
+    print(response['answer'])
 
-    return jsonify({"message": "query processed"})
+    return jsonify({"message": response['answer']})
+
+@app.route('/api/get-category', methods=['POST'])
+async def send_category():
+    data = request.json
+    query = data.get('data').get('category')
+
+    file_path = 'model_embeddings/restaurants.json'
+
+    ret = []
+    try:
+        with open(file_path, 'r') as file:
+            existing_data = json.load(file)
+            for obj in existing_data:
+                if "type" in obj and obj["type"] == query:
+                    ret.append(obj)
+    except FileNotFoundError:
+        ret = []
+
+    return jsonify({"ret": (ret)})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000)
-
