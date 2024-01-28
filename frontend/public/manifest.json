@@ -8,32 +8,22 @@
 		"default_icon": "logo192.png"
 	},
 	"permissions": [
-		"storage" 
+		"storage",
+		"tabs",
+		"scripting"
 	],
 	"background": {
 		"service_worker": "/static/js/background.js" 
 	},
 	"host_permissions": [  
-		"http://localhost:3000/",
-		"http://localhost:5000/",
-		"https://www.youtube.com/*"
+		"*://*/*"
 	],
 	"icons": {
 		"128": "logo512.png" 
 	},
 	"externally_connectable": { 
-		"matches": ["*://*/*", "https://www.external_website_url/*"]
+		"matches": ["*://*/*"]
 	},
-	"content_scripts": [  
-		{
-			"matches": ["https://www.youtube.com/*", "https://www.linkedin.com/*","https://mail.google.com/*"], 
-			"js": [
-				"/static/js/content.js",
-				"/static/js/background.js",
-				"/static/js/main.js"
-			]
-		}
-	],
 	"web_accessible_resources": [ 
 		{
 			"resources": ["logo512.png"],

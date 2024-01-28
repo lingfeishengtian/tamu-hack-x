@@ -3,15 +3,9 @@
 import "./App.css";
 import Category from "./components/Category";
 import Chat from "./components/Chat";
+import { extractElemList, ValidSites, getBestSiteForUrl } from "./html_parser/extract_elem_list";
 
 function App() {
-  // chrome.tabs.query({ currentWindow: true, active: true }, 
-  //   function (tabs) {
-  //   for (let tab of tabs) {
-  //     console.log(tab.url);
-  //   }
-  // }
-  // )
   return (
     <>
       <div id="topBar">Tabventure</div>
@@ -26,7 +20,7 @@ function App() {
 
         </div>
         <div id="chatWrapper">
-          <Chat/>
+          <Chat />
         </div>
         {/* <div id="left">
             <Chat />
