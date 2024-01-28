@@ -59,13 +59,6 @@ function App() {
             >
               Activities
             </div>
-            <div className="categoryMenuButtons"></div>
-            <div
-              className="categoryMenuButtons"
-              onClick={() => handleCategoryClick("Bookmarks")}
-            >
-              Bookmarks
-            </div>
             {selectedCategory && (
               <CategoryDetails
                 category={selectedCategory}
