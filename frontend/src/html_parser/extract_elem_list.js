@@ -27,8 +27,8 @@ export const ValidSites = {
 }
 
 const CSSSelectors = {
-    [ValidSites.AmericanAirlines]: "app-slice-details > div",
-    [ValidSites.Tripadvisor]: ".result-card",
+    [ValidSites.AmericanAirlines]: "[class=\"grid-x grid-padding-x ng-star-inserted\"]",
+    [ValidSites.Tripadvisor]: "ul > li",
     [ValidSites.AirBnb]: "[aria-live=polite] > div > [class=\" dir dir-ltr\"]",
     [ValidSites.Yelp]: "ul > li [data-testid]",
 }
@@ -44,11 +44,11 @@ export function getBestSiteForUrl(inURL) {
 }
 
 export function extractElemList(html, site) {
-    var cssQuery = CSSSelectors[site];
+    var cssQuery = CSSSelectors[getBestSiteForUrl(site)];
     var $ = parse(html);
     var elems = $.querySelectorAll(cssQuery);
     console.log(elems);
-    return elems.map((elem, i) => {
-        return stripAttributes(elem).outerHTML;
-    }).concat({url: site});
+    return elems.slice(0, 100).map((elem, i) => {
+        return stripAttributes(elem).innerHTML + " - " + site;
+    });
 }
