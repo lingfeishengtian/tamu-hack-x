@@ -1,8 +1,16 @@
+/*global chrome*/
+
 import "./App.css";
 import Category from "./components/Category";
 import Chat from "./components/Chat";
 
 function App() {
+  chrome.tabs.query({ }, function (tabs) {
+    for (let tab of tabs) {
+      console.log(tab);
+      console.log("test")
+    }
+  })
   return (
     <>
       <div id="topBar">Tabventure</div>
