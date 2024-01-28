@@ -9,9 +9,9 @@ import CategoryDetails from "./components/CategoryDetails";
 import { sendHTMLRequest } from "./AI_API";
 
 function App() {
-  useEffect(() => {
-    sendHTMLRequest();
-  }, []);
+  // useEffect(() => {
+  //   sendHTMLRequest();
+  // }, []);
 
   const [selectedCategory, setSelectedCategory] = useState(null);
 
@@ -58,13 +58,6 @@ function App() {
               onClick={() => handleCategoryClick("Activities")}
             >
               Activities
-            </div>
-            <div className="categoryMenuButtons"></div>
-            <div
-              className="categoryMenuButtons"
-              onClick={() => handleCategoryClick("Bookmarks")}
-            >
-              Bookmarks
             </div>
             {selectedCategory && (
               <CategoryDetails
