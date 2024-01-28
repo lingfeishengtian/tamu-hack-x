@@ -5,12 +5,13 @@ import Category from "./components/Category";
 import Chat from "./components/Chat";
 
 function App() {
-  chrome.tabs.query({ }, function (tabs) {
-    for (let tab of tabs) {
-      console.log(tab);
-      console.log("test")
-    }
-  })
+  // chrome.tabs.query({ currentWindow: true, active: true }, 
+  //   function (tabs) {
+  //   for (let tab of tabs) {
+  //     console.log(tab.url);
+  //   }
+  // }
+  // )
   return (
     <>
       <div id="topBar">Tabventure</div>
