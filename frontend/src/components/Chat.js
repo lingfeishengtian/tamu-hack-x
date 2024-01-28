@@ -4,7 +4,7 @@ import { sendChatMessage } from "../AI_API";
 
 const Chat = () => {
   const [messages, setMessages] = useState([
-    { message: "im a bot", sender: "Tabventure Assistant" },
+    { message: "Hello, how can I help you?", sender: "Tabventure Assistant" },
   ]);
 
   const [inputValue, setInputValue] = useState("");

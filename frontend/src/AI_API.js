@@ -1,6 +1,7 @@
 import axios, { isCancel, AxiosError } from 'axios';
 import { getChromeTabs } from './chrome_tab_extractor';
-const HOST = "http://100.64.27.42:3000/"
+// const HOST = "http://100.64.27.42:3000/"
+const HOST = "http://localhost:4000/"
 
 export async function sendHTMLRequest() {
     let arrs = await getChromeTabs()
@@ -12,7 +13,7 @@ export async function sendHTMLRequest() {
                 "html": arr
             }
         }
-        axios.post(HOST + URL, data)
+        // axios.post(HOST + URL, data)
     }
 }
 

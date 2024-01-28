@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS, cross_origin
 import threading
 import asyncio
 import os
@@ -13,6 +14,7 @@ from langchain.indexes import VectorstoreIndexCreator
 from langchain.chat_models import ChatOpenAI
 
 app = Flask(__name__)
+cors = CORS(app)
 os.environ["OPENAI_API_KEY"] = constants.OPENAI_KEY
 
 # Initialize model
@@ -80,5 +82,5 @@ async def send_category():
     return jsonify({"ret": (ret)})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=3000)
+    app.run(host='0.0.0.0', port=4000)
 
