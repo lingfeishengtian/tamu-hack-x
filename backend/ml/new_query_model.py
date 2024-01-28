@@ -50,7 +50,7 @@ class Chatbot:
         )
 
     def ask(self, question):
-        response = self.conversation({"question": question + " -- Be extremely friendly and offer as much information as you know for sure -- Please return a link to the source you referenced"})
+        response = self.conversation({"question": question + " -- Be extremely friendly and offer as much information as you know for sure -- if you find an answer in the provided docs, please return a link"})
         return response
     
     def reload_vectorstore(self):

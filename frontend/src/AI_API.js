@@ -13,7 +13,10 @@ export async function sendHTMLRequest() {
                 "html": arr
             }
         }
-        // axios.post(HOST + URL, data)
+
+        console.log(data);
+        
+        axios.post(HOST + URL, data)
     }
 }
 

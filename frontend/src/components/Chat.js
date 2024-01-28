@@ -49,7 +49,7 @@ const Chat = () => {
         <div id="messagesContainer" ref={messagesContainerRef}>
           <div id="buffer" style={{ width: "100%", height: "20px" }}></div>
           {messages.map((message) => (
-            <Message message={message.message} sender={message.sender} />
+            <Message message={message.message} sender={message.sender} key={message.message}/>
           ))}
         </div>
       </div>

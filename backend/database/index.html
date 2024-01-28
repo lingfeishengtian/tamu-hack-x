@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Log-In / Sign-Up</title>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD63Jko-swAVu9Ip6PrdPpuUkR_lRXrdpI",
+            authDomain: "tabventure-manager.firebaseapp.com",
+            projectId: "tabventure-manager",
+            storageBucket: "tabventure-manager.appspot.com",
+            messagingSenderId: "997983272750",
+            appId: "1:997983272750:web:c57c07a3d1dbd1eb3904bf",
+            measurementId: "G-REJLJQJVH4"
+        };
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script>
+
+
+    <!-- *******************************************************************************************
+       * TODO(DEVELOPER): Paste the initialization snippet from:
+       * Firebase Console > Overview > Add Firebase to your web app. *
+       ***************************************************************************************** -->
+
+    <script src="https://www.gstatic.com/firebasejs/ui/6.1.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.1.0/firebase-ui-auth.css" />
+    <script type="text/javascript">
+        firebase.initializeApp(firebaseConfig);
+        var uiConfig = {
+            callbacks: {
+                signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+                    var user = authResult.user;
+                    var credential = authResult.credential;
+                    var isNewUser = authResult.additionalUserInfo.isNewUser;
+                    var providerId = authResult.additionalUserInfo.providerId;
+                    var operationType = authResult.operationType;
+                    return true;
+                },
+                signInFailure: function (error) {
+                    return handleUIError(error);
+                },
+                uiShown: function () {
+                    document.getElementById('loader').style.display = 'none';
+                }
+            },
+            credentialHelper: firebaseui.auth.CredentialHelper.NONE,
+            // Query parameter name for mode.
+            queryParameterForWidgetMode: 'mode',
+            // Query parameter name for sign in success url.
+            queryParameterForSignInSuccessUrl: 'signInSuccessUrl',
+            // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+            signInFlow: 'popup',
+            //signInSuccessUrl: '<url-to-redirect-to-on-success>',
+            signInOptions: [
+                // Leave the lines as is for the providers you want to offer your users.
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                ,
+                {
+                    provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                    requireDisplayName: true
+                },
+                {
+                    recaptchaParameters: {
+                        type: 'image',
+                        size: 'invisible',
+                        badge: 'bottomleft'
+                    }
+                },
+                firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
+            ],
+            
+            immediateFederatedRedirect: false,
+            
+            //tosUrl: '<your-tos-url>',
+            
+            // privacyPolicyUrl: function () {
+            //     window.location.assign('<your-privacy-policy-url>');
+            // }
+        };
+
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+</head>
+
+<body>
+   
+    <h1>Welcome to My Awesome App</h1>
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div>
+</body>
+
+</html>
