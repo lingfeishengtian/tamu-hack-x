@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name": "Traveler\u2019s Table",
+        "rating": "4.4 stars",
+        "price_range": "$$",
+        "categories": [
+            "Tapas/Small Plates",
+            "New American"
+        ],
+        "location": "Montrose",
+        "review_snippet": "\u201cFirst time at Travelers Table, and it was fantastic! Great food, impeccable service, and a wonderful atmosphere. Loved the attentive staff ensuring everyone\u2026\u201d"
+    },
+    {
+        "id": 2,
+        "name": "Nancy\u2019s Hustle",
+        "rating": "4.4 stars",
+        "price_range": "$$$",
+        "categories": [
+            "New American",
+            "Tapas/Small Plates",
+            "Modern European"
+        ],
+        "location": "EaDo",
+        "review_snippet": "NO question as to why Nancy's Hustle is SO highly rated and talked about. No question as to why the reservations are so hard to come by! Nancy's Hustle is a..."
+    },
+    {
+        "id": 3,
+        "name": "Bosscat Kitchen & Libations",
+        "rating": "4.3 stars",
+        "price_range": "$$",
+        "categories": [
+            "New American",
+            "Whiskey Bars",
+            "Breakfast & Brunch"
+        ],
+        "location": "Highland Village",
+        "review_snippet": "\u201cFamily graduation dinner with friends and the food was amazing! Love the cozy feeling of the restaurant and service was great. Highly recommended.\u201d"
+    },
+    {
+        "id": 4,
+        "name": "State of Grace",
+        "rating": "4.4",
+        "price_range": "$$$",
+        "categories": [
+            "Southern",
+            "New American",
+            "Seafood"
+        ],
+        "location": "River Oaks",
+        "review_snippet": "We got oysters from the happy hour menu, which runs from open to 6pm on weekdays, despite what the website/google says. They do half off on certain oysters, so..."
+    },
+    {
+        "id": 5,
+        "name": "Oporto Fooding House & Wine",
+        "rating": "4.4 stars",
+        "price_range": "$$",
+        "categories": [
+            "Tapas/Small Plates",
+            "Portuguese",
+            "Wine Bars"
+        ],
+        "location": "Fourth Ward",
+        "review_snippet": "At first glance, Oporto's is a little hard to find, since it's located right between two roads with no parking lot. We went to Oporto's on a weekday for lunch..."
+    }
+]
