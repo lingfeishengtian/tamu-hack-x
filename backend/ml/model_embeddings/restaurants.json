@@ -1,0 +1,43 @@
+[
+    {
+        "id": 12345,
+        "link": "https://www.aa.com/booking/find-flights",
+        "type": "flight",
+        "name": "American Airlines",
+        "rating": "4.5 stars",
+        "price_range": "$$",
+        "price": "$484",
+        "categories": [
+            "Flight",
+            "Travel"
+        ],
+        "location": "DFW to BPT",
+        "review_snippet": "Nonstop flight from DFW to BPT",
+        "start": "9:12 PM",
+        "end": "10:39 PM",
+        "duration": "1h 27m",
+        "accomodations": [
+            "Nonstop"
+        ]
+    },
+    {
+        "id": 10,
+        "link": "https://www.yelp.com/search?find_desc=Burgers&find_loc=College+Station,+TX",
+        "type": "restaurant",
+        "name": "Steak 48",
+        "rating": "4.4 stars",
+        "price_range": "$$$$",
+        "price": "",
+        "categories": [
+            "Steakhouses",
+            "Seafood",
+            "Bars"
+        ],
+        "location": "Highland Village",
+        "review_snippet": "\u201cOf course the great steak 48, known for their steaks and of course ambience. All the celebrations happen here. My waiting I wish I knew his name was awesome.\u2026\u201d",
+        "start": "",
+        "end": "",
+        "duration": "",
+        "accomodations": []
+    }
+]
