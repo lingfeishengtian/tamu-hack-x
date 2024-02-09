@@ -20,7 +20,7 @@ class Chatbot:
     def __init__(self):
         os.environ["OPENAI_API_KEY"] = constants.OPENAI_KEY
 
-        self.llm = ChatOpenAI()
+        self.llm = ChatOpenAI(model="gpt-3.5-turbo-16k")
 
         self.prompt = ChatPromptTemplate(
             messages=[

@@ -25,7 +25,7 @@ HTML input: ```{html_content}```
 
 class PreprocessModel:
     def __init__(self):
-        self.llm = ChatOpenAI()
+        self.llm = ChatOpenAI(model='gpt-3.5-turbo-16k')
         self.parser = PydanticOutputParser(pydantic_object=Item)
         self.prompt = ChatPromptTemplate.from_template(template=PROMPT_STRING)
         self.format_instructions = self.parser.get_format_instructions()
